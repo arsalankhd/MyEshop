@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20221026225801_InitialDatabaseMig.cs" />
+    <Compile Remove="Migrations\20221026225801_InitialDatabaseMig.Designer.cs" />
+    <Compile Remove="Migrations\20221030124256_SeedDataCategoryMig.cs" />
+    <Compile Remove="Migrations\20221030124256_SeedDataCategoryMig.Designer.cs" />
+    <Compile Remove="Migrations\20221030132041_addMostTables.cs" />
+    <Compile Remove="Migrations\20221030132041_addMostTables.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Admin\ManageUsers\Create.cshtml" />
+    <None Include="Pages\Admin\ManageUsers\Delete.cshtml" />
+    <None Include="Pages\Admin\ManageUsers\Details.cshtml" />
+    <None Include="Pages\Admin\ManageUsers\Edit.cshtml" />
+    <None Include="Pages\Admin\ManageUsers\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+    <PackageReference Include="ZarinPalSandbox" Version="2.0.4" />
+  </ItemGroup>
+
+</Project>

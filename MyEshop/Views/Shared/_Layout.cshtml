@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @*<link rel="stylesheet" href="~/css/bootstrap-rtl.css" />*@
+    @*<link rel="stylesheet" href="~/lib/bootstrap4/css/bootstrap.css" />*@
+    <link rel="stylesheet" href="~/lib/bootstrap4/css/bootstrap-rtl.css" />
+    <link href="https://cdn.rawgit.com/rastikerdar/sahel-font/v1.0.0-alpha23/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="rtl" style="font-family: Sahel,sans-serif;">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-light mt-2" asp-area="" asp-controller="Home" asp-action="Index">فروشگاه لباس و لوازم ورزشی</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light mt-2" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home" aria-hidden="true"></i> خانه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mt-2" asp-area="" asp-controller="Home" asp-action="ContactUs"><i class="fa fa-address-book" aria-hidden="true"></i> تماس با ما</a>
+                        </li>
+                        <partial name="_Groups" />
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light btn btn-hover color-5 mt-2"><i class="fa fa-user"></i> @User.Identity.Name خوش آمدید !</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light btn btn-hover color-5 mt-2" style="background: red;" asp-area="" asp-controller="Account" asp-action="Logout"><i class="fa fa-sign-out"></i> خروج از حساب</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light btn btn-hover color-5 mt-2" asp-area="" asp-controller="Account" asp-action="Register"><i class="fa fa-user-plus"></i> ثبت نام</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light btn btn-hover color-5 mt-2" asp-area="" asp-controller="Account" asp-action="Login"><i class="fa fa-sign-in"></i> ورود</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                @await Component.InvokeAsync("ProductGroupsComponent")
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Arsalan Khodadadi
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
