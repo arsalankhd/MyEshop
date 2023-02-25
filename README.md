@@ -23,9 +23,9 @@
 <h2>Admin Panel</h2>
 <img width="960" alt="Screenshot 2023-02-25 192050" src="https://user-images.githubusercontent.com/123501729/221368073-0e374def-b1dd-4099-b611-e25412a3abc2.png">
 <h2>Add Product in Admin Panel</h2>
-![Screenshot 2023-02-25 192132](https://user-images.githubusercontent.com/123501729/221368351-5d4c6785-21e1-4e20-9e42-9c045a5653e4.png)
+<img width="960" alt="Screenshot 2023-02-25 202831" src="https://user-images.githubusercontent.com/123501729/221369693-18fc362f-838b-4faa-8b00-d2c20cece111.png">
 <h2>Edit Product in Admin Panel</h2>
-![Screenshot 2023-02-25 192217](https://user-images.githubusercontent.com/123501729/221368370-070c884b-3441-4edb-99e0-4ed1f3130fc5.png)
+<img width="960" alt="Screenshot 2023-02-25 202806" src="https://user-images.githubusercontent.com/123501729/221369709-e7132167-5727-4582-93e3-bcaa54bca73d.png">
 <h2>Delete Product in Admin Panel</h2>
 <img width="960" alt="Screenshot 2023-02-25 192249" src="https://user-images.githubusercontent.com/123501729/221368173-3b49447e-bbfd-43e7-8dcc-0067bb39983c.png">
 <h2>Manage Users in Admin Panel</h2>
