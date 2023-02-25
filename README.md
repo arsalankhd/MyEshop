@@ -1,8 +1,8 @@
 # An electronic online shop built with ASP.NET Core
 ## Home Page 
-### When the user is not logged into their account
+When the user is not logged into their account:
 <img width="960" alt="Screenshot 2023-02-25 190946" src="https://user-images.githubusercontent.com/123501729/221367655-a5f6ebf0-62ca-47f2-9569-60147a0506b4.png">
-### When the user is logged into their account
+When the user is logged into their account:
 <img width="960" alt="Screenshot 2023-02-25 191742" src="https://user-images.githubusercontent.com/123501729/221367670-e01e0127-dd89-48bc-bb6e-493a87cf1bd7.png">
 ## Show products based on their categories
 <img width="960" alt="Screenshot 2023-02-25 191042" src="https://user-images.githubusercontent.com/123501729/221367762-bb56eccc-56fa-488b-8182-3eee33a4d296.png">
